@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "test_taro",
+  "description": "test",
+  "appid": "wxa28c29ff839ef39c",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "condition": {}
+}

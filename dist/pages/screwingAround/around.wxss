@@ -1,0 +1,19 @@
+
+.item{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+.test-h{
+    position: relative;
+    margin-top: 20rpx
+}
+.title{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx
+}
+.cur{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx
+}

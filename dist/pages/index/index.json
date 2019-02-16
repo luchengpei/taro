@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "at-tab-bar": "../../npm/taro-ui/dist/weapp/components/tab-bar/index",
+    "at-tabs": "../../npm/taro-ui/dist/weapp/components/tabs/index",
+    "at-tabs-pane": "../../npm/taro-ui/dist/weapp/components/tabs-pane/index",
+    "around": "../screwingAround/around",
+    "cp": "../cp/cp",
+    "avatar": "../../components/avatar/avatar",
+    "list": "../../components/list/list"
+  },
+  "navigationBarTitleText": "随便玩玩"
+}

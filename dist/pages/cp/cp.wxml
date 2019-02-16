@@ -1,0 +1,8 @@
+<block>
+    <view>
+        <button type="{{tp}}" class="btn" bindtap="ck">
+            <slot></slot>
+        </button>
+        <view>{{index}}</view><text class="{{cls}}">{{anonymousState__temp}}</text>
+    </view>
+</block>

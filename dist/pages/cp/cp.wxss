@@ -1,0 +1,22 @@
+
+.btn{
+    width: 200rpx;
+    color: aqua;
+    margin: 0;
+    padding: 0
+}
+.child{
+    color: skyblue
+}
+.red{
+    color: red
+}
+.skyblue{
+    color: skyblue
+}
+.succ{
+    color: greenyellow
+}
+.pk{
+    color: pink
+}

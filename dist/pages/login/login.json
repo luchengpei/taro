@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "at-input": "../../npm/taro-ui/dist/weapp/components/input/index",
+    "at-toast": "../../npm/taro-ui/dist/weapp/components/toast/index",
+    "at-message": "../../npm/taro-ui/dist/weapp/components/message/index"
+  },
+  "navigationBarTitleText": "登陆"
+}

@@ -1,0 +1,8 @@
+<block>
+    <view class="avatar">
+        <view class="avatar-title">{{title}}</view>
+        <view class="avatar-content">
+            <at-avatar image="https://wx.qlogo.cn/mmopen/vi_32/ZBqC64Qlc8JXplGgLjlQNyxvcgYmHq8ueWCmU8hFbnqeCLHyufgWfa0eETfmxBL4YdPRIBvROKJBAQbITvopqg/132" __triggerObserer="{{ _triggerObserer }}" circle="{{true}}"></at-avatar>
+        </view>
+    </view>
+</block>

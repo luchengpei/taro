@@ -1,0 +1,17 @@
+<block>
+    <view class="login">
+        <view class="img">
+            <image src="{{anonymousState__temp}}" class="login_img"></image>
+        </view>
+        <view class="form">
+            <at-input title="账号" __triggerObserer="{{ _triggerObserer }}" type="text" placeholder="请输入手机号码或者账号" value="{{account}}" bindonchange="account_check" __fn_onChange="{{true}}"></at-input>
+            <at-input type="password" __triggerObserer="{{ _triggerObserer }}" title="密码" placeholder="请输入密码" value="{{password}}" bindonchange="password_check" __fn_onChange="{{true}}"></at-input>
+            <button class="login_btn" type="primary" bindtap="to_login" style="{{anonymousState__temp2}}">登陆{{counter.num}}</button>
+        </view>
+        <view class="footer"><text class="left" bindtap="forget">忘记密码</text><text class="right" bindtap="to_register">没有账号？去注册!!!</text>
+        </view>
+        <at-toast text="账号密码不正确" __triggerObserer="{{ _triggerObserer }}" status="error" isOpened="{{tip}}"></at-toast>
+        <at-toast text="拼命加载ing..." __triggerObserer="{{ _triggerObserer }}" status="loading" isOpened="{{is_loading}}"></at-toast>
+        <at-message className="message" __triggerObserer="{{ _triggerObserer }}"></at-message>
+    </view>
+</block>

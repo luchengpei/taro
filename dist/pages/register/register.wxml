@@ -1,0 +1,17 @@
+<block>
+    <view class="wrap">
+        <image src="{{anonymousState__temp}}" class="image"></image>
+        <at-form bindonsubmit="onSubmit" __triggerObserer="{{ _triggerObserer }}" __fn_onSubmit="{{true}}">
+            <at-input value="{{account}}" __triggerObserer="{{ _triggerObserer }}" type="text" title="账号" placeholder="QQ号/手机号" bindonchange="hanndelAccount" __fn_onChange="{{true}}"></at-input>
+            <at-input value="{{password}}" __triggerObserer="{{ _triggerObserer }}" type="password" title="密码" placeholder="密码" bindonchange="hanndelPwd" __fn_onChange="{{true}}"></at-input>
+            <at-input value="{{phone}}" __triggerObserer="{{ _triggerObserer }}" type="number" title="手机号" placeholder="手机号" bindonchange="hanndelPhone" __fn_onChange="{{true}}"></at-input>
+            <at-input clear="{{true}}" __triggerObserer="{{ _triggerObserer }}" title="验证码" type="text" maxLength="4" placeholder="验证码" value="{{code}}" bindonchange="handleChange" __fn_onChange="{{true}}">
+                <view class="yzm" bindtap="reset">{{yzm}}</view>
+            </at-input>
+            <at-message __triggerObserer="{{ _triggerObserer }}"></at-message>
+            <at-button formType="submit" __triggerObserer="{{ _triggerObserer }}" className="_sub">注册</at-button>
+        </at-form>{{massage}}<text class="text" bindtap="click">已有账号，去登陆页面!!!</text>
+        <at-toast isOpened="{{isOpened}}" __triggerObserer="{{ _triggerObserer }}" text="注册成功" status="success"></at-toast>
+        <at-toast isOpened="{{isOk}}" __triggerObserer="{{ _triggerObserer }}" text="你还没注册账号" status="error"></at-toast>
+    </view>
+</block>

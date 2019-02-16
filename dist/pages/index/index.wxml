@@ -1,0 +1,26 @@
+<block>
+    <view>
+        <at-tab-bar fixed="{{true}}" __triggerObserer="{{ _triggerObserer }}" tabList="{{anonymousState__temp}}" bindonclick="handleClick" current="{{current}}" __fn_onClick="{{true}}"></at-tab-bar>
+        <at-tabs current="{{current}}" __triggerObserer="{{ _triggerObserer }}">
+            <at-tabs-pane current="{{current}}" __triggerObserer="{{ _triggerObserer }}" index="{{0}}">
+                <view class="index">
+                    <around __triggerObserer="{{ _triggerObserer }}"></around>
+                    <cp tp="text" __triggerObserer="{{ _triggerObserer }}" bindonpack="Pack" cls="pk" className="child" __fn_onPack="{{true}}">按钮</cp>
+                </view>
+            </at-tabs-pane>
+            <at-tabs-pane current="{{current}}" __triggerObserer="{{ _triggerObserer }}" index="{{1}}">
+                <view class="self">
+                    <view class="self-box">
+                        <image src="{{anonymousState__temp2}}" class="image"></image>
+                    </view>
+                    <view class="avatar">
+                        <avatar title="头像" __triggerObserer="{{ _triggerObserer }}"></avatar>
+                    </view>
+                    <view class="list">
+                        <list title="{{item.title}}" __triggerObserer="{{ _triggerObserer }}" content="{{item.content}}" color="{{item.color}}" background="{{item.background}}" wx:key="index" avatar="{{item.avatar}}" wx:for="{{list}}" wx:for-item="item" wx:for-index="index"></list>
+                    </view>
+                </view>
+            </at-tabs-pane>
+        </at-tabs>
+    </view>
+</block>

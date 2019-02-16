@@ -1,0 +1,24 @@
+<block>
+    <view><text class="title">小程序搞起来</text>
+        <swiper class="test-h" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}" bindchange="change">
+            <block>
+                <block wx:if="{{isTurn}}">
+                    <swiper-item wx:key="img" wx:for="{{img}}" wx:for-item="k">
+                        <image style="width:100%;height:100%" src="{{k.img}}"></image>
+                    </swiper-item>
+                </block><text wx:else>么有</text>
+            </block>
+        </swiper>
+        <view class="cur">
+            <block>
+                <block wx:if="{{idx == 0}}">
+                    <view>哈哈猪年大吉，明年本命，希望对我好好的！</view>
+                </block>
+                <block wx:elif="{{idx == 1}}">
+                    <view>2019的期望，技术越来越好，家人身体健康，我开心的工作</view>
+                </block>
+                <view wx:else>2019。。。。即将开始</view>
+            </block>
+        </view>
+    </view>
+</block>

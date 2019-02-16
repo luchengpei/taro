@@ -1,0 +1,68 @@
+<block>
+    <view class="resume">
+        <view class="resume-personal-info">
+            <view class="personal-info-header">
+                <view class="info-icon" style="margin-top:20px">
+                    <at-icon value="credit-card" __triggerObserer="{{ _triggerObserer }}" size="30"></at-icon>
+                </view>
+                <view class="info-text"><text style="margin-top:20px">个人信息(Personal Info)</text>
+                    <view class="img-box">
+                        <at-avatar image="{{anonymousState__temp}}" __triggerObserer="{{ _triggerObserer }}" size="large" circle="{{true}}"></at-avatar>
+                    </view>
+                </view>
+            </view>
+            <view class="info-content">
+                <view class="info-content-row"><text class="info-left">姓名:陆城锫</text><text class="info-right">出生年月:1995.04</text>
+                </view>
+                <view class="info-content-row"><text class="info-left">民族:汉</text><text class="info-right">政治面貌:团员</text>
+                </view>
+                <view class="info-content-row"><text class="info-left">电话:199-273-51936</text><text class="info-right">住址:广东省茂名市信宜市</text>
+                </view>
+                <view class="info-content-row"><text class="info-left">邮箱:1191650655@qq.com</text><text class="info-right">学历:本科(休学)</text>
+                </view>
+            </view>
+        </view>
+        <view class="technical-stack">
+            <view class="technical-stack-header">
+                <view class="stack-icon">
+                    <at-icon value="tag" __triggerObserer="{{ _triggerObserer }}" size="30"></at-icon>
+                </view>
+                <view class="stack-text"><text>技术栈(Techincal Stack)</text>
+                </view>
+            </view>
+            <view class="stack-content">
+                <view style="color:orange;text-align:center;width:100%">掌握技能</view>
+                <view>个人GitHub: https://github.com/luchengpei</view>
+                <view style="color:skyblue">构建工具</view><text>熟悉使用webpack构建项目</text>
+                <view style="color:skyblue">框架</view>
+                <view class="item">
+                    <view style="font-size:30px">·</view>
+                    <view>熟悉html css html5 css3 原生js jquery Bootstrap</view>
+                </view>
+                <view class="item">
+                    <view style="font-size:30px">·</view>
+                    <view class="long" style="color:skyblue">熟悉vue框架 vuex vue-router axios react redex taro框架</view>
+                </view>
+                <view class="item">
+                    <view style="font-size:30px">·</view>
+                    <view>可以使用vue编写基础组件</view>
+                </view>
+                <view class="item">
+                    <view style="font-size:30px">·</view>
+                    <view>熟悉使用element-ui mint-ui taro-ui 等ui框架</view>
+                </view>
+                <view class="item">
+                    <view style="font-size:30px">·</view>
+                    <view>熟悉使用less sass scss stylus 等css预处理</view>
+                </view>
+                <view style="color:skyblue">项目经验</view>
+                <view class="project-experience">
+                    <view class="dot">·</view><text>.....没写完</text>
+                </view>
+                <view class="test" style="width:100%;height:200px">
+                    <image src="{{anonymousState__temp2}}" style="width:40%;height:100%" bindtap="check"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
