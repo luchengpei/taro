@@ -23,14 +23,15 @@ class App extends Component {
       'pages/index/index',
       
       'pages/register/register',
-      'pages/resume/resume'
+      'pages/resume/resume',
+      'components/dialog/dialog'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black',
-      enablePullDownRefresh:true
+    
     }
   }
 

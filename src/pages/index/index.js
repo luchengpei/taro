@@ -6,6 +6,7 @@ import Around from '../screwingAround/around.js'
 import {AtTabBar,AtTabs, AtTabsPane} from 'taro-ui'
 import List from '../../components/list/list'
 import Avatar from '../../components/avatar/avatar'
+import Album from '../../components/album/album'
 export default class Index extends Component {
 
   config = {
@@ -73,6 +74,11 @@ export default class Index extends Component {
             });
         break;
         case 1:
+            Taro.setNavigationBarTitle({
+              title:'生活相册'
+            })
+        break;
+        case 2:
           Taro.setNavigationBarTitle({
             title:'个人中心'
           });
@@ -82,20 +88,20 @@ export default class Index extends Component {
   }
   componentWillMount () {
     console.log(Taro.getApp().state,'willMout')
-    Taro.showNavigationBarLoading()
+    // Taro.showNavigationBarLoading()
    }
   componentDidMount () { 
     console.log(this.state.randomCode,'90')
-    Taro.hideNavigationBarLoading()
-        Taro.login({
-            success(){
-              Taro.getUserInfo({
-                  success(res){
-                      console.log(res,'xx')
-                  }
-              })
-            }
-        })
+    // Taro.hideNavigationBarLoading()
+    //     Taro.login({
+    //         success(){
+    //           Taro.getUserInfo({
+    //               success(res){
+    //                   console.log(res,'xx')
+    //               }
+    //           })
+    //         }
+    //     })
     }
 
   componentWillUnmount () { }
@@ -107,53 +113,59 @@ export default class Index extends Component {
   render () {
 
      //
-    const tabList = [{ title: '标签页1' }, { title: '标签页2' }]
+    // const tabList = [{ title: '标签页1' }, { title: '标签页2' }]
     
 
     return (
       <View>
         <AtTabBar
         fixed
+        backgroundColor='#ececec'
+        color='#ea6bb8'
         tabList={[
         { title: '随便玩下', iconType: 'bullet-list', text: 'new' },
+        { title: '生活相册', iconType: 'camera' },
         { title: '我的', iconType: 'user' }
         ]}
         onClick={this.handleClick}
         current={this.state.current}
         />
         <AtTabs current={this.state.current} >
-        <AtTabsPane current={this.state.current} index={0} >
-            <View className='index'>
-              <Around/>
-            <Cp tp='text' onPack={this.Pack} cls='pk' className='child'>按钮</Cp>
-          </View>
-        </AtTabsPane>
-        <AtTabsPane current={this.state.current} index={1}>
-          <View className='self'>
-            <View className='self-box'>
-              <Image src={require('../../image/smlz.png')} className='image'></Image>
+          <AtTabsPane current={this.state.current} index={0} >
+              <View className='index'>
+                <Around/>
+              <Cp tp='text' onPack={this.Pack} cls='pk' className='child'>按钮</Cp>
             </View>
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={1}>
+            <Album/>
+          </AtTabsPane>
+          <AtTabsPane current={this.state.current} index={2}>
+            <View className='self'>
+              <View className='self-box'>
+                <Image src={require('../../image/smlz.png')} className='image'></Image>
+              </View>
 
-            <View className='avatar'>
-               <Avatar title='头像'></Avatar>
-            </View>
+              <View className='avatar'>
+                <Avatar title='头像'></Avatar>
+              </View>
 
-            <View className='list'>
-                {this.state.list.map((item,index)=>{
-                  return (
-                    <List title={item.title}
-                    content={item.content}
-                    color={item.color}
-                    background={item.background}
-                    key={index}
-                    avatar={item.avatar}
-                    >
-                    </List>
-                  )
-                })}
+              <View className='list'>
+                  {this.state.list.map((item,index)=>{
+                    return (
+                      <List title={item.title}
+                      content={item.content}
+                      color={item.color}
+                      background={item.background}
+                      key={index}
+                      avatar={item.avatar}
+                      >
+                      </List>
+                    )
+                  })}
+              </View>
             </View>
-          </View>
-        </AtTabsPane>
+          </AtTabsPane>
         </AtTabs>
       </View>
     )

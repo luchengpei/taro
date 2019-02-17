@@ -168,3 +168,28 @@
 .dot{
     font-size: 30rpx
 }
+.m-test{
+    border:1rpx solid red
+}
+.m-test.active{
+    -webkit-transform: scale(1.4,1.3);
+        -ms-transform: scale(1.4,1.3);
+            transform: scale(1.4,1.3);
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all
+}
+/* @keyframes test{
+    0%{
+        transform: scale(1) rotate(90deg)
+    }
+    20%{
+        transform: scale(1.4) rotate(180)
+    }
+    50%{
+        transform: scale(1.3) rotate(270deg)
+    }
+    100%{
+        transform: scale(1) rotate(360deg)
+    }
+} */

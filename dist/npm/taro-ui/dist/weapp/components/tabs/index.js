@@ -51,7 +51,7 @@ var AtTabs = (_temp2 = _class = function (_AtComponent) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtTabs.__proto__ || Object.getPrototypeOf(AtTabs)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp6", "anonymousState__temp7", "anonymousState__temp8", "anonymousState__temp9", "loopArray0", "tabList", "scroll", "tabDirection", "scrollLeft", "scrollTop", "scrollIntoView", "__fn_onClick", "swipeable", "current", "customStyle", "className", "height", "animated", "children"], _this.$$refs = [{
       type: "dom",
-      id: "gXFJG",
+      id: "uIxFA",
       refName: "refTabHeader",
       fn: null
     }], _temp), _possibleConstructorReturn(_this, _ret);

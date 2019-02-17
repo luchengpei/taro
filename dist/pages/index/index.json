@@ -5,6 +5,7 @@
     "at-tabs-pane": "../../npm/taro-ui/dist/weapp/components/tabs-pane/index",
     "around": "../screwingAround/around",
     "cp": "../cp/cp",
+    "album": "../../components/album/album",
     "avatar": "../../components/avatar/avatar",
     "list": "../../components/list/list"
   },

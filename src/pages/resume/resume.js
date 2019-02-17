@@ -2,20 +2,68 @@ import Taro,{Component} from '@tarojs/taro'
 import {View,Text,WebView} from '@tarojs/components'
 import{AtIcon,AtAvatar} from 'taro-ui'
 import './resume.css'
+import bind from 'bind-decorator';
 //个人简历页面
 export default class Resume extends Component{
     constructor(){
         super(...arguments)
         this.state={
-
+            isCheck:false,
+            select:null,
+            imgs:[
+                {
+                    img:require('../../image/self.png'),
+                },
+                {
+                    img:require('../../image/ts1.png'),
+                },
+                {
+                    img:require('../../image/ts2.png'),
+                },
+                {
+                    img:require('../../image/ts3.png')
+                },
+                {
+                    img:require('../../image/ts4.png')
+                },
+                {
+                    img:require('../../image/ts5.png')
+                },
+                {
+                    img:require('../../image/ts6.png')
+                }
+            ]
         }
     }
 
     config={
         navigationBarTitleText: '个人简历'
     }
-    check(){
-        console.log(87)
+    check(index){
+        // console.log(index)
+        // this.setState({
+        //     select:index
+        // },()=>{
+        //     console.log(this.state.select,'hehe')
+        // })
+        if(this.state.isCheck){
+            this.setState({
+                isCheck:false, 
+            })
+        }else{
+            this.setState({
+                isCheck:true,
+                select:index
+            })
+        }
+        // setTimeout(()=>{
+        //     this.setState({
+        //         isCheck:false
+        //     })
+        // },1000)
+    }
+    click(index){
+        console.log(index,'haha')
     }
     render(){
         return(
@@ -82,9 +130,14 @@ export default class Resume extends Component{
                             <View className='dot'>·</View>
                             <Text>.....没写完</Text>
                         </View>
-                        <View className='test' style='width:100%;height:200px'>
-                            <Image src={require('../../image/self.png')} style='width:40%;height:100%' onClick={this.check}></Image>
-                        </View>
+                        {/* <View style='width:100%;height:200px;' >
+                        
+                            {this.state.imgs.map((item,index)=>{
+                                return <Image src={item.img} style='width:31%;height:100%;margin:2px' onClick={this.check.bind(this,index)} 
+                                key={index}
+                                className={`m-test ${this.state.select==index&&this.state.isCheck?'active':''}`}></Image>
+                            })}    
+                        </View> */}
                     </View>
 
                     

@@ -21,7 +21,7 @@
     width: 200rpx !important;
 }
 .image{
-    width: 100%
+    width: 100%;
 }
 .text{
     text-decoration: underline;

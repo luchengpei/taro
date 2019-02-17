@@ -52,13 +52,13 @@ var _App = function (_BaseComponent) {
       password: '',
       phone: ''
     }, _this.config = {
-      pages: ['pages/login/login', 'pages/index/index', 'pages/register/register', 'pages/resume/resume'],
+      pages: ['pages/login/login', 'pages/index/index', 'pages/register/register', 'pages/resume/resume', 'components/dialog/dialog'],
       window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
         navigationBarTitleText: 'WeChat',
-        navigationBarTextStyle: 'black',
-        enablePullDownRefresh: true
+        navigationBarTextStyle: 'black'
+
       }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }

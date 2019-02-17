@@ -1,6 +1,6 @@
 <block>
     <view>
-        <at-tab-bar fixed="{{true}}" __triggerObserer="{{ _triggerObserer }}" tabList="{{anonymousState__temp}}" bindonclick="handleClick" current="{{current}}" __fn_onClick="{{true}}"></at-tab-bar>
+        <at-tab-bar fixed="{{true}}" __triggerObserer="{{ _triggerObserer }}" backgroundColor="#ececec" color="#ea6bb8" tabList="{{anonymousState__temp}}" bindonclick="handleClick" current="{{current}}" __fn_onClick="{{true}}"></at-tab-bar>
         <at-tabs current="{{current}}" __triggerObserer="{{ _triggerObserer }}">
             <at-tabs-pane current="{{current}}" __triggerObserer="{{ _triggerObserer }}" index="{{0}}">
                 <view class="index">
@@ -9,6 +9,9 @@
                 </view>
             </at-tabs-pane>
             <at-tabs-pane current="{{current}}" __triggerObserer="{{ _triggerObserer }}" index="{{1}}">
+                <album __triggerObserer="{{ _triggerObserer }}"></album>
+            </at-tabs-pane>
+            <at-tabs-pane current="{{current}}" __triggerObserer="{{ _triggerObserer }}" index="{{2}}">
                 <view class="self">
                     <view class="self-box">
                         <image src="{{anonymousState__temp2}}" class="image"></image>

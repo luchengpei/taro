@@ -37,7 +37,7 @@ var Resume = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Resume.__proto__ || Object.getPrototypeOf(Resume)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Resume.__proto__ || Object.getPrototypeOf(Resume)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "isCheck", "select", "imgs"], _this.config = {
       navigationBarTitleText: '个人简历'
     }, _this.$$refs = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -46,12 +46,55 @@ var Resume = (_temp2 = _class = function (_BaseComponent) {
     key: "_constructor",
     value: function _constructor() {
       _get(Resume.prototype.__proto__ || Object.getPrototypeOf(Resume.prototype), "_constructor", this).apply(this, arguments);
-      this.state = {};
+      this.state = {
+        isCheck: false,
+        select: null,
+        imgs: [{
+          img: "/image/self.png"
+        }, {
+          img: "/image/ts1.png"
+        }, {
+          img: "/image/ts2.png"
+        }, {
+          img: "/image/ts3.png"
+        }, {
+          img: "/image/ts4.png"
+        }, {
+          img: "/image/ts5.png"
+        }, {
+          img: "/image/ts6.png"
+        }]
+      };
     }
   }, {
     key: "check",
-    value: function check() {
-      console.log(87);
+    value: function check(index) {
+      // console.log(index)
+      // this.setState({
+      //     select:index
+      // },()=>{
+      //     console.log(this.state.select,'hehe')
+      // })
+      if (this.state.isCheck) {
+        this.setState({
+          isCheck: false
+        });
+      } else {
+        this.setState({
+          isCheck: true,
+          select: index
+        });
+      }
+      // setTimeout(()=>{
+      //     this.setState({
+      //         isCheck:false
+      //     })
+      // },1000)
+    }
+  }, {
+    key: "click",
+    value: function click(index) {
+      console.log(index, 'haha');
     }
   }, {
     key: "_createData",
@@ -60,17 +103,15 @@ var Resume = (_temp2 = _class = function (_BaseComponent) {
       this.__props = arguments[1] || this.props || {};
       ;
       var anonymousState__temp = "/image/self.png";
-      var anonymousState__temp2 = "/image/self.png";
       Object.assign(this.__state, {
-        anonymousState__temp: anonymousState__temp,
-        anonymousState__temp2: anonymousState__temp2
+        anonymousState__temp: anonymousState__temp
       });
       return this.__state;
     }
   }]);
 
   return Resume;
-}(_index.Component), _class.properties = {}, _class.$$events = ["check"], _temp2);
+}(_index.Component), _class.properties = {}, _class.$$events = [], _temp2);
 exports.default = Resume;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Resume, true));

@@ -67,6 +67,11 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
             break;
           case 1:
             _index2.default.setNavigationBarTitle({
+              title: '生活相册'
+            });
+            break;
+          case 2:
+            _index2.default.setNavigationBarTitle({
               title: '个人中心'
             });
             break;
@@ -107,22 +112,22 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
     key: "componentWillMount",
     value: function componentWillMount() {
       console.log(_index2.default.getApp().state, 'willMout');
-      _index2.default.showNavigationBarLoading();
+      // Taro.showNavigationBarLoading()
     }
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log(this.state.randomCode, '90');
-      _index2.default.hideNavigationBarLoading();
-      _index2.default.login({
-        success: function success() {
-          _index2.default.getUserInfo({
-            success: function success(res) {
-              console.log(res, 'xx');
-            }
-          });
-        }
-      });
+      // Taro.hideNavigationBarLoading()
+      //     Taro.login({
+      //         success(){
+      //           Taro.getUserInfo({
+      //               success(res){
+      //                   console.log(res,'xx')
+      //               }
+      //           })
+      //         }
+      //     })
     }
   }, {
     key: "componentWillUnmount",
@@ -139,12 +144,13 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       ;
+      var anonymousState__temp = [{ title: '随便玩下', iconType: 'bullet-list', text: 'new' }, { title: '生活相册', iconType: 'camera' }, { title: '我的', iconType: 'user' }];
+      var anonymousState__temp2 = "/image/smlz.png";
 
       //
-      var tabList = [{ title: '标签页1' }, { title: '标签页2' }];
+      // const tabList = [{ title: '标签页1' }, { title: '标签页2' }]
 
-      var anonymousState__temp = [{ title: '随便玩下', iconType: 'bullet-list', text: 'new' }, { title: '我的', iconType: 'user' }];
-      var anonymousState__temp2 = "/image/smlz.png";
+
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2

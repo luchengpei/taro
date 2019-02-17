@@ -1,0 +1,25 @@
+.album {
+    width:100%;
+    height: 100%;
+    position: relative;
+    .title{
+        color: yellowgreen
+    }
+    .time{
+        color:yellowgreen
+    }
+    .test{
+        .test.active{
+            transform: scale(3) !important
+        }
+     }
+     .img-box{
+         width: 100%;
+         height: 400px;
+         
+         .img{
+             width: 100%;
+             height: 100%;
+         }
+     }
+    }
