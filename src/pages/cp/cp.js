@@ -7,7 +7,7 @@ export default class Cp extends Component{
             this.state={
                 index:0,
                 list:[
-                    '循环1','循环2','循环31'
+                    '循环1','循环2','循环3'
                 ]
             }
         }
